@@ -1,12 +1,14 @@
 <section>
-    <div class="centerCard">
-        <div class="nameDescription">
-            <h3>Guilherme</h3>
-            <p> ablublé</p>
+    <button (click)="getInfos()">Ver repositorios</button>
+    
+    <div class="centerCard" *ngFor="let usuarios of listUsuarios" let i = index>
+        <div class="nameDescription" >
+            <h3>{{usuarios.nomeAuto}}</h3>
+            <p>{{usuarios.descricaoRep}} </p>
         </div>
-        <div>
-            <img>
-            <h5 class="vulgo">guibs_</h5>
+        <div class="imgLog" value="usuario.foto">
+            <img valeu="usuario.foto">
+            <h5 class="vulgo">{{ usuarios.nomeRep }}</h5>
         </div>
     </div>
     <div class="buttons">
