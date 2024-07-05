@@ -1,17 +1,15 @@
 <section>
-    <button (click)="getInfos()">Ver repositorios</button>
-    
-    <div class="centerCard" *ngFor="let usuarios of listUsuarios" let i = index>
-        <div class="nameDescription" >
-            <h3>{{usuarios.nomeAuto}}</h3>
-            <p>{{usuarios.descricaoRep}} </p>
-        </div>
-        <div class="imgLog" value="usuario.foto">
-            <img valeu="usuario.foto">
-            <h5 class="vulgo">{{ usuarios.nomeRep }}</h5>
-        </div>
+  <div class="centerCard" *ngFor="let usuarios of listUsuarios" let i="index">
+    <div class="nameDescription">
+      <h3>{{ usuarios.nomeAuto }}</h3>
+      <p>{{ usuarios.descricaoRep }}</p>
     </div>
-    <div class="buttons">
-       <app-buttons></app-buttons>
+    <div class="imgLog" value="usuario.foto">
+      <img valeu="usuario.foto" />
+      <h5 class="vulgo">{{ usuarios.nomeRep }}</h5>
     </div>
+  </div>
+  <div class="buttons">
+    <app-buttons></app-buttons>
+  </div>
 </section>

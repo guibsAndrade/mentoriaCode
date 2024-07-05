@@ -1,4 +1,4 @@
-export interface IUsuarios {
+export interface IUsuarios { 
   nomeAuto: string;
   foto: string;
   numEstrelas: number;

@@ -12,35 +12,28 @@ import { NgStyle } from '@angular/common';
 export class CardsComponent implements OnInit {
 
   value: any;
-  listUsuarios: any[] = [
-    // {nomeAuto:'gui', descricaoRep:'abobora'}
-  ];
-  teste: any;
+  listUsuarios: any[] =[];
+    teste: any;
 
   constructor(
     private api: ServiceAllService,
   ) { }
 
   ngOnInit(): void {
-    debugger
-    this.getInfos();
-    console.log(this.listUsuarios, "valores do back")
-  }
-
-  getInfos(){
-    debugger
-    this.api.getAll().subscribe((result)=> {
-      this.teste = result 
-      this.teste.forEach((item: any) => {
+    this.api.getList().subscribe((result)=> {
+      debugger
+      this.value = result
+      this.value.items.forEach((items: any) => {
         this.listUsuarios.push({
-          descricaoRep: item.description,
-          foto: item.owner.avatar_url,
-          nomeAuto: item.name,
-          nomeRep: item.owner.login,
-          numEstrelas: item.forks,
+          descricaoRep: items.description,
+          foto: items.owner.avatar_url,
+          nomeAuto: items.name,
+          nomeRep: items.owner.login,
+          numEstrelas: items.forks,
         });
      })
-    console.log(result, "<-- valores");
-  })
-}
+    })
+    console.log(this.listUsuarios, "<-- valores");
+
+  }
 }

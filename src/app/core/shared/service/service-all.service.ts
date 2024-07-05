@@ -14,9 +14,9 @@ export class ServiceAllService {
     private _http: HttpClient,
   ) { }
 
-public getList(): Observable<any[]>{
+public getList(): Observable<IUsuarios>{
   //exemplos que passam a interface como tipagem, por qual objetivo? 
-  return this._http.get<any[]>(this.urlApi)
+  return this._http.get<IUsuarios>(this.urlApi); 
 }
 
 getAll(){
