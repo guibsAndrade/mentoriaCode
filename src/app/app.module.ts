@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './core/components/home/home.component';
@@ -13,14 +12,13 @@ import { HttpClientModule, HttpClient} from '@angular/common/http';
     AppComponent,
     HomeComponent,
     CardsComponent,
-    ButtonsComponent
-    
+    ButtonsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-
+    
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
